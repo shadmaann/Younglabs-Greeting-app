@@ -12,7 +12,7 @@ function App() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/greet?name=${name}`);
+      const response = await fetch(`https://your-backend.vercel.app/api/greet?name=${name}`);
       const data = await response.json();
       setMessage(data.message || data.error);
     } catch (error) {
